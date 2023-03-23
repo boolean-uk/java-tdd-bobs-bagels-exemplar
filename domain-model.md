@@ -44,4 +44,4 @@ I'd like to know if I try to remove an item that doesn't exist in my basket.
 |         |                            | remove(String bagel)          | As a customer remove the first instance of a type of bagel from the basket | Success message if the bagel is successfully removed              |
 |         |                            |                               |                                                                            | Failure message if no bagels of that type are found in the basket |
 |         |                            | resizeBasket(int newCapacity) | As a manager change the capacity of a basket                               | Success message if the basket is resized                          |
-|         |                            |                               |                                                                            | Failure message if the newCapacity is not a proper size           |
+|         |                            | getCapacity()                 |                                                                            | Failure message if the newCapacity is not a proper size           |

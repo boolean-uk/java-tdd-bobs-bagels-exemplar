@@ -43,4 +43,12 @@ class BasketTest {
         Assertions.assertFalse(basket.remove("Garlic bagel"));
         Assertions.assertEquals("[Plain bagel, Plain bagel, Onion bagel]", basket.toString());
     }
+
+    @Test
+    public void successfullyResizeBasketTo5() {
+        Basket basket = new Basket();
+
+        Assertions.assertTrue(basket.resizeBasket(5));
+        Assertions.assertEquals(5, basket.getCapacity());
+    }
 }
