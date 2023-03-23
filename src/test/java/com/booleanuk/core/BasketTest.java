@@ -68,5 +68,4 @@ class BasketTest {
         Assertions.assertTrue(basket.resizeBasket(1));
         Assertions.assertEquals("[Plain bagel]", basket.toString());
     }
-
 }

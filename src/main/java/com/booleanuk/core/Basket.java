@@ -34,6 +34,9 @@ public class Basket {
     public boolean resizeBasket(int newCapacity) {
         if (newCapacity > 0) {
             this.capacity = newCapacity;
+            while (this.contents.size() > this.capacity) {
+                this.contents.remove(this.contents.size()-1);
+            }
             System.out.println("Basket resized to hold " + this.capacity + " bagels.");
             return true;
         } else {
