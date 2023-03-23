@@ -11,9 +11,14 @@ public class Basket {
     }
 
     public boolean add(String bagel) {
-        this.contents.add(bagel);
-        return true;
-
+        if (this.contents.size() < this.capacity) {
+            this.contents.add(bagel);
+            System.out.println(bagel + " added to basket.");
+            return true;
+        } else {
+            System.out.println("Could not add " + bagel + " to basket, as it is full.");
+            return false;
+        }
     }
 
     public String toString() {
