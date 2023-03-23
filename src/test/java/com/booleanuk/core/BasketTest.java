@@ -58,4 +58,15 @@ class BasketTest {
 
         Assertions.assertFalse(basket.resizeBasket(-1));
     }
+
+    @Test
+    public void successfullyResizeBasketTo1() {
+        Basket basket = new Basket();
+        basket.add("Plain bagel");
+        basket.add("Onion bagel");
+
+        Assertions.assertTrue(basket.resizeBasket(1));
+        Assertions.assertEquals("[Plain bagel]", basket.toString());
+    }
+
 }
