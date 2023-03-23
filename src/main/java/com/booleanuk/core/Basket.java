@@ -22,7 +22,13 @@ public class Basket {
     }
 
     public boolean remove(String bagel) {
-        return this.contents.remove(bagel);
+        if (this.contents.remove(bagel)) {
+            System.out.println("Successfully removed a " + bagel + " from basket.");
+            return true;
+        } else {
+            System.out.println("Could not remove a " + bagel + " from the basket as there doesn't appear to be one stored in there.");
+            return false;
+        }
     }
 
     public String toString() {
