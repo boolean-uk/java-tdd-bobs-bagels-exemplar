@@ -22,4 +22,14 @@ class BasketTest {
         Assertions.assertEquals("[Plain bagel, Cinnamon and raisin bagel, Onion bagel]", basket.toString());
     }
 
+    @Test
+    public void removeBagelSucceeds() {
+        Basket basket = new Basket();
+        basket.add("Plain bagel");
+        basket.add("Plain bagel");
+        basket.add("Onion bagel");
+
+        Assertions.assertTrue(basket.remove("Plain bagel"));
+        Assertions.assertEquals("[Plain bagel, Onion bagel]", basket.toString());
+    }
 }
