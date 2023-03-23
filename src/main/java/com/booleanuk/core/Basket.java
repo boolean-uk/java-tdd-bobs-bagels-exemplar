@@ -21,6 +21,10 @@ public class Basket {
         }
     }
 
+    public boolean remove(String bagel) {
+        return this.contents.remove(bagel);
+    }
+
     public String toString() {
         return contents.toString();
     }
