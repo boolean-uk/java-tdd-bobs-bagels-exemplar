@@ -32,4 +32,15 @@ class BasketTest {
         Assertions.assertTrue(basket.remove("Plain bagel"));
         Assertions.assertEquals("[Plain bagel, Onion bagel]", basket.toString());
     }
+
+    @Test
+    public void removeBagelFailure() {
+        Basket basket = new Basket();
+        basket.add("Plain bagel");
+        basket.add("Plain bagel");
+        basket.add("Onion bagel");
+
+        Assertions.assertFalse(basket.remove("Garlic bagel"));
+        Assertions.assertEquals("[Plain bagel, Plain bagel, Onion bagel]", basket.toString());
+    }
 }
