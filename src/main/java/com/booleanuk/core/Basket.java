@@ -31,6 +31,21 @@ public class Basket {
         }
     }
 
+    public boolean resizeBasket(int newCapacity) {
+        if (newCapacity > 0) {
+            this.capacity = newCapacity;
+            System.out.println("Basket resized to hold " + this.capacity + " bagels.");
+            return true;
+        } else {
+            System.out.println("Could not resize basket, please supply a positive, whole number for the new capacity.");
+            return false;
+        }
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
     public String toString() {
         return contents.toString();
     }
