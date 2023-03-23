@@ -51,4 +51,11 @@ class BasketTest {
         Assertions.assertTrue(basket.resizeBasket(5));
         Assertions.assertEquals(5, basket.getCapacity());
     }
+
+    @Test
+    public void unsuccessfullyResizeBasket() {
+        Basket basket = new Basket();
+
+        Assertions.assertFalse(basket.resizeBasket(-1));
+    }
 }
